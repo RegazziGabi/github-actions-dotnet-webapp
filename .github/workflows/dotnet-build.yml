@@ -14,4 +14,4 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Depenências # baixa tudo o que o projeto precisa para rodar
-      run: dotnet restore
+      run: dotnet restore /workspaces/github-actions-dotnet-webapp/github4women/github4women.csproj
