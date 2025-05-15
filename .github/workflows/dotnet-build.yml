@@ -1,0 +1,17 @@
+name: Push a cada hora
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *' # Executa a cada hora
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Depenências # baixa tudo o que o projeto precisa para rodar
+      run: dotnet restore
